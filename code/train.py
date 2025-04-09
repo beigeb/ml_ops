@@ -13,8 +13,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     df = pd.read_csv(f'{args.train}/train.csv')
-    X = df.drop('target', axis=1)
-    y = df['target']
+    X = df.drop('Target', axis=1)
+    y = df['Target']
 
     model = RandomForestClassifier()
     model.fit(X, y)
